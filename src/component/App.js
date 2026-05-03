@@ -1,4 +1,4 @@
-import { use, useEffect, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Error from "./Error";
@@ -82,7 +82,7 @@ function App() {
     dispatch,
   ] = useReducer(reducer, initialState);
   useEffect(() => {
-    fetch("http://localhost:9000/questions")
+    fetch("/questions")
       .then((res) => res.json())
       .then((data) => {
         dispatch({ type: "dataReceived", payload: data });
