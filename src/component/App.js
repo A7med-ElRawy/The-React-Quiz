@@ -155,7 +155,7 @@ let initialState = {
       points: 20,
     },
   ],
-  status: "loading",
+  status: "ready",
   index: 0,
   indexAnswer: null,
   points: 0,
@@ -240,8 +240,8 @@ function App() {
     <div className="app">
       <Header />
       <Main>
-        {status === "loading" && <Loader />}
-        {status === "error" && <Error />}
+        {/* {status === "loading" && <Loader />}
+        {status === "error" && <Error />} */}
         {status === "ready" && (
           <>
             <StartScreen numQuestions={numQuestions} dispatch={dispatch} />
