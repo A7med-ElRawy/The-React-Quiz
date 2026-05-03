@@ -1,4 +1,4 @@
-import { useEffect, useReducer } from "react";
+import { useReducer } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Error from "./Error";
@@ -173,7 +173,7 @@ function reducer(state, action) {
       return {
         ...state,
         status: "active",
-        timer: 10,
+        timer: state.questions.length * SEC_PER_QUESTION,
       };
     case "answerQuestion":
       let question = state.questions[state.index];
