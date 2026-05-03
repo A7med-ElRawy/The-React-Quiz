@@ -1,4 +1,4 @@
-import { use, useEffect, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Error from "./Error";
